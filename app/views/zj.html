@@ -1,0 +1,78 @@
+<div id="tb">
+	<img src="images/1.png" id="fh" ng-click="fh()"/>
+	添加bug
+</div>
+<div id="ct">
+	<!-- 错误分类 -->
+	<p id="classify">错误分类：</p>
+	<div class="classify" id="classif">
+		<label>
+			<input type="radio" value="0" ng-model='classify' />设计
+		</label>
+		<label>
+			<input type="radio" value="1" ng-model='classify'/>前端
+		</label>
+		<label>
+			<input type="radio" value="2" ng-model='classify'/>后台
+		</label>
+	</div>
+	<!-- 指定给谁 -->
+	<div id="too" style="display:none">
+		<p id="to">指定给:</p>
+		<!-- ui人员 -->
+		<div class="wyc" style="display:none">
+			<label>
+				<input type="radio" value="wyc" ng-model='to' />wyc
+			</label>
+			<label>
+				<input type="radio" value="fbb" ng-model='to' />fbb
+			</label>
+		</div>
+		<!-- 前端 -->
+		<div class="lnn" style="display:none">
+			<label>
+				<input type="radio" value="lnn" ng-model='to' />lnn
+				<input type="radio" value="mg" ng-model='to' />mg
+			</label>
+		</div>
+		<!-- 后台 -->
+		<div class="jgr" style="display:none">
+			<label>
+				<input type="radio" value="jgr" ng-model='to' />jgr
+				<input type="radio" value="sp" ng-model='to' />sp
+			</label>
+		</div>
+
+	</div>
+	
+	<!-- 发生频率 -->
+	<p id="frequency">发生频率：</p>
+	<div class="frequency">
+		<label>
+			<input type="radio" value="0" ng-model='frequency'/>偶尔
+		</label>
+		<label>
+			<input type="radio" value="1" ng-model='frequency'/>经常
+		</label>
+	</div>
+	<!-- 重要性 -->
+	<p id="importance">重要性：</p>
+	<div class="importance">
+		<label>
+			<input type="radio" value="0" ng-model='importance'/>重要
+		</label>
+		<label>
+			<input type="radio" value="1" ng-model='importance'/>中等
+		</label>
+		<label>
+			<input type="radio" value="2" ng-model='importance'/>一般
+		</label>
+	</div>
+	<!-- 简介 -->
+	<p>简介</p>
+	<input type="text" ng-model="summary" />
+	<!-- 描述 -->
+	<p>描述</p>
+	<text-angular ng-model="description"></text-angular>
+	<input type="button" value="提交" ng-click="fc()" class="tj"/>
+</div>
